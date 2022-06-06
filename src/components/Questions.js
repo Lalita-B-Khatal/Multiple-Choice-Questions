@@ -75,7 +75,7 @@ const getData = (startCount, endCount, data) => {
 export const Questions = () => {
 	const [answerData, setValue] = useState(QuetionsJson.questions);
 	const [startCount, setStartCount] = useState(0);
-	const [endCount, setEndCount] = useState(2);
+	const [endCount, setEndCount] = useState(1);
 	const [updatedList, setUpdatedData] = useState([]);
 	const [showAnswer, setFlag] = useState(false);
 
@@ -105,8 +105,8 @@ export const Questions = () => {
 	};
 
 	const nextHandler = () => {
-		let newStartCount = startCount + 2;
-		let newEndCount = endCount + 2;
+		let newStartCount = startCount + 1;
+		let newEndCount = endCount + 1;
 		if (newEndCount <= answerData.length) {
 			let newData = getData(newStartCount, newEndCount, answerData)
 			setUpdatedData(newData);
@@ -116,8 +116,8 @@ export const Questions = () => {
 	}
 
 	const handleBack = () => {
-		let newStartCount = startCount - 2;
-		let newEndCount = endCount - 2;
+		let newStartCount = startCount - 1;
+		let newEndCount = endCount - 1;
 		if (newStartCount >= 0) {
 			let newData = getData(newStartCount, newEndCount, answerData)
 			setUpdatedData(newData);
