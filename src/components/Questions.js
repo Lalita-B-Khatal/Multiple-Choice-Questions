@@ -132,8 +132,8 @@ export const Questions = () => {
 	let ShowNext = endCount < answerData.length
 	return (
 		<QuestionContext.Provider value={answerData}>
-			<Grid container style={{ display: "flex", justifyContent: "center" }}>
-				{!showAnswer ? <Grid item xs={10}>
+			<Grid container style={{ flex: 1, justifyContent: "center", height: "100vh", alignItems: "center" }}>
+				{!showAnswer ? <Grid item lg={10}>
 					<Card className={classes.cardStyle}>
 						<AppBar position="static" className={classes.header}>
 							<Toolbar>

@@ -16,13 +16,12 @@ const useStyles = makeStyles(() => ({
     },
     cardStyle: {
         backgroundColor: "#f3f3f3",
+        height: "500px",
+        overflowY: "auto",
 
     },
     answerCard: {
         padding: "20px 0px 20px 12px"
-    },
-    containerStyle: {
-        height: "500px"
     },
     containerGrid: {
         paddingBottom: "20px"
@@ -34,7 +33,7 @@ export const Answers = () => {
     const answerData = useContext(QuestionContext);
     console.log(answerData, "answerData")
     return (
-        <Grid item xs={12} className={classes.containerStyle}>
+        <Grid item xs={10}>
             <Card className={classes.cardStyle}>
                 <Typography variant="h5" className={classes.title}>
                     Answers
